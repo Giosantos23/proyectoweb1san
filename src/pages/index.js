@@ -1,0 +1,5 @@
+export * from './Dashboard'
+export * from './login'
+export * from './register'
+export * from './reporte'
+export * from './about'
