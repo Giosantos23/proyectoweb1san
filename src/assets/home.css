@@ -96,3 +96,11 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #ccc;
 }
+.wrapper{
+    color: whitesmoke;
+    font-size: 25px;
+}
+.dashboard-title{
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+}

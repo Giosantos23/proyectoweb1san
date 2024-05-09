@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import React, { useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
@@ -11,7 +10,7 @@ export const Dashboard = () => {
   const [updatedGenre, setUpdatedGenre] = useState('')
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
-  const [created_at, setCreatedAt] = useState('')
+  const [createdAt, setCreatedAt] = useState('')
 
   // create
   const [newTitle, setNewTitle] = useState('')
@@ -56,7 +55,7 @@ export const Dashboard = () => {
   // create post
   const handleCreate = async () => {
     try {
-      const response = await axios.post('http://localhost:22523/posts', {
+      const response = await axios.post('http://22523.arpanetos.lol/posts', {
         title: newTitle,
         content: newContent,
         movie_title: newMovieTitle,
@@ -102,10 +101,10 @@ export const Dashboard = () => {
 
   const handleUpdate = async () => {
     try {
-      const response = await axios.put(`http://localhost:22523/posts/${postId}`, {
+      const response = await axios.put(`http://22523.arpanetos.lol/posts/${postId}`, {
         title,
         content,
-        created_at,
+        createdAt,
         movieTitle: updatedMovieTitle,
         releaseDate: updatedReleaseDate,
         director: updatedDirector,
@@ -126,7 +125,7 @@ export const Dashboard = () => {
   // delete post
   const handleDelete = async () => {
     try {
-      const response = await axios.delete(`http://localhost:22523/posts/${postId}`)
+      const response = await axios.delete(`http://22523.arpanetos.lol/posts/${postId}`)
 
       if (response.status === 200) {
         console.log('Post eliminado exitosamente')
@@ -145,14 +144,11 @@ export const Dashboard = () => {
 
   return (
     <div>
-      <h1>Dashboard</h1>
+      <h1 className='dashboard-title'>Dashboard</h1>
       <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
+        <h3>
           <Link to="/about">About</Link>
-        </li>
+        </h3>
       </ul>
 
       <div className='input-group'>
@@ -205,7 +201,7 @@ export const Dashboard = () => {
         <input
           type="text"
           placeholder="Fecha de creación"
-          value={created_at}
+          value={createdAt}
           onChange={handleCreatedAtChange}
         />
         <input

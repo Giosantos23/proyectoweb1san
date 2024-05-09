@@ -1,7 +1,7 @@
-# proyectoweb1san
-# Proyecto Blog Web
 
-Este es un proyecto de blog web donde los usuarios pueden registrarse, iniciar sesión y ver el panel de control del blog.
+# Proyecto Blog Web 22523
+
+Este es un proyecto de blog web sobre peliculas estrenadas en el 2024. Se tiene la posibilidad de ser administrador y acceder a las funcionalidades de CRUD. Se tiene un sistema de login que se protege mediante JWT.    
 
 ## Funcionalidades
 
@@ -11,43 +11,22 @@ Este es un proyecto de blog web donde los usuarios pueden registrarse, iniciar s
 
 ## Tecnologías utilizadas
 
-- **Frontend**: El frontend de la aplicación está construido con React.js y utiliza React Router para la navegación entre páginas.
+- **Frontend**: El frontend de la aplicación está construido con React.js.
 - **Backend**: El backend de la aplicación está construido con Node.js y Express.js para el servidor web.
-- **Base de datos**: Se utiliza una base de datos MySQL para almacenar la información de los usuarios y las publicaciones del blog.
+- **Base de datos**: Se utiliza un REST API para almacenar la información de los usuarios y las publicaciones del blog.
 - **Seguridad**: Las contraseñas de los usuarios se almacenan de forma segura utilizando el algoritmo de hash bcrypt.
 
-## Estructura del proyecto
-
-- **`/frontend`**: Contiene el código del frontend de la aplicación.
-- **`/backend`**: Contiene el código del backend de la aplicación.
-  - **`/routes`**: Contiene los archivos de enrutamiento para manejar las solicitudes HTTP.
-  - **`/db.js`**: Contiene funciones para interactuar con la base de datos.
-  - **`/passwordUtils.js`**: Contiene funciones relacionadas con el manejo seguro de contraseñas.
-- **`/database`**: Contiene archivos relacionados con la configuración y la estructura de la base de datos MySQL.
 
 ## Configuración del proyecto
 
-1. Clona este repositorio en tu máquina local.
-2. Instala las dependencias del frontend y del backend utilizando npm o yarn en las carpetas `/frontend` y `/backend`.
-3. Configura la base de datos MySQL con las credenciales necesarias y ejecuta los scripts de creación de tablas proporcionados en la carpeta `/database`.
-4. Ejecuta el servidor backend utilizando el comando `npm start` en la carpeta `/backend`.
-5. Ejecuta la aplicación frontend utilizando el comando `npm start` en la carpeta `/frontend`.
-6. Accede a la aplicación en tu navegador visitando la URL proporcionada por el servidor frontend.
+1. Clonar este repositorio.
+2. Clonar el repositorio del API y usar docker compose up para levantar el API.
+3. Ejecuta la aplicación frontend utilizando el comando `npm run dev` .
 
-## Contribuciones
 
-Las contribuciones son bienvenidas. Si deseas contribuir a este proyecto, por favor, sigue estos pasos:
 
-1. Haz un fork del repositorio.
-2. Crea una nueva rama para tus cambios (`git checkout -b feature/nueva-caracteristica`).
-3. Realiza tus cambios y haz commit de ellos (`git commit -am 'Agrega una nueva característica'`).
-4. Sube tus cambios a tu repositorio en GitHub (`git push origin feature/nueva-caracteristica`).
-5. Crea un nuevo Pull Request.
+## Autor
 
-## Autores
-
-- [Giovanni]
+- [Giovanni Santos 22523]
 
 ## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.

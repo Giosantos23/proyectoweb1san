@@ -25,7 +25,7 @@ export const LoginPage = () => {
       // Guardar el token en el almacenamiento local
       localStorage.setItem('token', token)
 
-      // Redirigir al usuario al dashboard
+      // Redirige al usuario al dashboard
       navigate('/Dashboard', {
         replace: true,
         state: {
@@ -37,16 +37,16 @@ export const LoginPage = () => {
       onResetForm()
     } catch (error) {
       console.error('Error al iniciar sesión:', error)
-      // Manejar el error de inicio de sesión, por ejemplo, mostrando un mensaje al usuario
     }
   }
 
   return (
   <div className='wrapper'>
     <form onSubmit={onLogin}>
-      <h1>Iniciar Sesión</h1>
+      <p>Iniciar Sesión</p>
 
       <div className='input-group'>
+      <label htmlFor='username'>Nombre:</label>
         <input
           type='text'
           name='username'
@@ -56,10 +56,10 @@ export const LoginPage = () => {
           required
           autoComplete='off'
         />
-        <label htmlFor='username'>Nombre:</label>
       </div>
 
       <div className='input-group'>
+      <label htmlFor='password'>Contraseña:</label>
         <input
           type='password'
           name='password'
@@ -69,7 +69,6 @@ export const LoginPage = () => {
           required
           autoComplete='off'
         />
-        <label htmlFor='password'>Contraseña:</label>
       </div>
 
       <button type='submit'>Entrar</button>
